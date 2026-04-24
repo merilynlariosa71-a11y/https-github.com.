@@ -2,170 +2,159 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HTML5 Laboratory Activity</title>
+    <title>My Webpage Project</title>
 
-    <!-- CSS Design -->
     <style>
+        /* ===== TAG SELECTORS ===== */
         body {
+            font-family: Arial;
             margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #1e88e5, #42a5f5);
-            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
         }
 
-        .container {
-            width: 80%;
-            max-width: 900px;
-            margin: 40px auto;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        h1 {
+        header {
+            background-color: #2e7d32;
+            color: white;
             text-align: center;
-            color: #c11ee5;
+            padding: 20px;
         }
 
-        h2 {
-            color: #a115c0;
-            border-bottom: 2px solid #e3f2fd;
-            padding-bottom: 5px;
+        nav {
+            background-color: #4caf50;
+            padding: 10px;
+            text-align: center;
         }
 
-        p {
-            color: #673e96;
-            line-height: 1.6;
-        }
-
-        ul, ol {
-            margin-left: 20px;
-        }
-
-        ul li {
-            color: #963b76;
-        }
-
-        ol li {
-            color: #6a1b9a;
-        }
-
-        a {
-            color: #8a35e5a0;
+        nav a {
+            color: white;
+            margin: 10px;
             text-decoration: none;
-            font-weight: bold;
         }
 
-        a:hover {
-            text-decoration: underline;
+        section {
+            display: flex;
+            margin: 15px;
         }
 
-        img {
-            display: block;
-            margin: 20px auto;
-            border-radius: 10px;
-            border: 4px solid #d81ee5e0;
+        article {
+            flex: 3;
+            background: white;
+            padding: 20px;
+            margin-right: 10px;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-
-        th {
-            background-color: #9849d0;
-            color: rgba(255, 255, 255, 0.83);
-            padding: 10px;
-        }
-
-        td {
-            background-color: #bf24b2;
-            padding: 10px;
-            text-align: center;
-        }
-
-        tr:hover td {
-            background-color: #7d3ea4;
+        aside {
+            flex: 1;
+            background: #c8e6c9;
+            padding: 20px;
         }
 
         footer {
+            background-color: #2e7d32;
+            color: white;
             text-align: center;
-            margin-top: 30px;
-            color: #777777;
-            font-size: 14px;
+            padding: 15px;
+        }
+
+        /* ===== CLASS SELECTOR ===== */
+        .highlight {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* ===== ID SELECTOR ===== */
+        #main-title {
+            font-size: 30px;
         }
     </style>
-
-    <!-- JavaScript Alert (Task 4) -->
-    <script>
-        window.onload = function () {
-            alert("Hello World");
-        };
-    </script>
 </head>
 
 <body>
 
-    <div class="container">
+<!-- HEADER -->
+<header>
+    <h1 id="main-title">My Webpage Project</h1>
+    <p class="highlight">HTML, CSS, and JavaScript</p>
+</header>
 
-        <h1>Welcome to My HTML5 Webpage</h1>
+<!-- NAVIGATION -->
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+</nav>
 
-        <p>
-            This webpage demonstrates basic HTML5 elements such as headings,
-            paragraphs, lists, tables, images, links, and JavaScript.
-        </p>
+<!-- SECTION -->
+<section>
 
-        <h2>Unordered List</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
+    <!-- ARTICLE -->
+    <article>
+        <h2>Student Info</h2>
 
-        <h2>Ordered List</h2>
-        <ol>
-            <li>Plan the webpage</li>
-            <li>Write the HTML code</li>
-            <li>Test in the browser</li>
-        </ol>
+        <!-- PART II A: VARIABLES OUTPUT -->
+        <p id="studentInfo"></p>
 
-        <p>
-            Visit <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
-            to learn more about HTML.
-        </p>
+        <!-- PART II B: BUTTON FUNCTION -->
+        <button onclick="showAlert()">Click Me</button>
 
-        <img src="https://scontent.fmnl4-1.fna.fbcdn.net/v/t39.30808-1/478638803_1277248363330577_419766595249778963_n.jpg?stp=c0.0.769.769a_dst-jpg_s200x200_tt6&_nc_cat=103&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeHk47RK7HHi3PEkoLKmKLRfZZ2-dcawwwZlnb51xrDDBuftSs6wOxGv0gA0Ge96hCRQHNk6LfHOhwbsT0_fWJks&_nc_ohc=JgxY0n4ssrEQ7kNvwERfcdb&_nc_oc=AdlQ1AMPX3cJAYqU2JWYYZQbzuYvb-O3nd_QdGFM7bxx4vUsn80PUmk_RSH_sBFejdU&_nc_zt=24&_nc_ht=scontent.fmnl4-1.fna&_nc_gid=DVqtuRrnNXxKRN0ammBvEA&oh=00_Afph15qAbi8sW0QpiM9mbYP8mBXUHwQ5CShoGUqRBJ9Tjw&oe=6981DCD1" alt="Placeholder Image" width="300">
+        <br><br>
 
-        <h2>Student Information</h2>
-        <table border="1">
-            <tr>
-                <th>Name</th>
-                <th>Course</th>
-                <th>Year Level</th>
-            </tr>
-            <tr>
-                <td>Laurence lumbaca</td>
-                <td>BSIT</td>
-                <td>2nd Year</td>
-            </tr>
-            <tr>
-                <td>Charlene Zafico</td>
-                <td>BSIT</td>
-                <td>3rd Year</td>
-            </tr>
-        </table>
+        <!-- PART II C: USER INPUT -->
+        <input type="text" id="userInput" placeholder="Enter something">
+        <button onclick="displayInput()">Submit</button>
 
-        <footer>
-            © 2026 HTML5 Laboratory Activity
-        </footer>
+        <p id="output"></p>
 
-    </div>
+        <!-- PART II D: EVENT HANDLING -->
+        <button id="changeTextBtn">Change Content</button>
+        <p id="dynamicText">Original Content</p>
+
+    </article>
+
+    <!-- ASIDE -->
+    <aside>
+        <h3>Sidebar</h3>
+        <p>Additional Info Here</p>
+    </aside>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 My Project</p>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+    // PART II A: VARIABLES
+    let name = "Your Name";
+    let course = "BSIT";
+
+    document.getElementById("studentInfo").innerHTML =
+        "Name: " + name + "<br>Course: " + course;
+
+    // PART II B: FUNCTION
+    function showAlert() {
+        alert("Button Clicked!");
+    }
+
+    // PART II C: USER INPUT
+    function displayInput() {
+        let input = document.getElementById("userInput").value;
+        document.getElementById("output").innerHTML = "You entered: " + input;
+    }
+
+    // PART II D: EVENT HANDLING
+    document.getElementById("changeTextBtn").addEventListener("click", function() {
+        document.getElementById("dynamicText").innerHTML = "Content Changed!";
+    });
+</script>
+
+<!-- 
+PART IV: HOSTING LINKS (REPLACE WITH YOUR LINKS)
+
+GitHub Pages: https://yourusername.github.io/
+Neocities: https://yourusername.neocities.org/
+-->
 
 </body>
 </html>
-
-
-
-
